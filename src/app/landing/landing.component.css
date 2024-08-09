@@ -1,0 +1,327 @@
+
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            background-color: #f5f5f5;
+    color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem 1rem;
+            position: fixed;
+            top: 20px;
+            left: 240px;
+            right: 20px;
+            z-index: 1000;
+            border-radius: 28px;
+            width: 66%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+            background-color: #fff;
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 150px 50px 50px;
+            color: #000;
+        }
+        .hero-content {
+            flex: 3;
+            animation: fadeInLeft 1s ease-out;
+            
+        }
+        .hero-content .signup{
+            font-size: 1.5rem;
+            font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .orange{
+            margin-top:15px;
+            color: rgb(245, 9, 9);
+        }
+
+        /* Update h1 and h2 font */
+        .hero-content h1{
+            font-size: 3.8rem;
+            font-family: Montserrat, sans-serif;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+        }
+        
+        
+        .hero-content h2.tagline {
+            margin-top: -2rem;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #555;
+            position: relative;
+            left: 45%;
+            font-style: italic;
+        }
+         /* Update paragraph font */
+         .hero-content p {
+            font-family: "Lora", serif;
+            color: #000;
+            font-size: 1.2rem;
+            text-align: justify;
+
+        }
+       
+        .hero-image {
+            flex: 2;
+            text-align: right;
+        }
+
+        .hero-image img {
+            width: 450px;
+            height: 550px;
+            border-radius: 25px;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .section {
+            /* padding: 50px; */
+            background-color: #f0f0f0;
+            display: flex;
+            flex-wrap: wrap;
+            /* padding: 150px 50px 50px; */
+            
+        }
+        .about-left{
+            flex: 3;
+            animation: fadeInLeft 1s ease-out;
+            padding: 10px;
+        }
+        .about-left h2{
+            font-size: 3rem;
+            text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+            padding: 2px;
+
+
+        }
+        .about-left .red{
+            color: red;
+        }
+        .about-left img{
+            width: 600px;
+            height: 550px;
+            border-radius: 15px;
+            
+        }
+        .about-right{
+            padding: 48px;
+            flex:4;
+            flex-direction: column;
+            font-family: "Lora", serif;
+            /* font-weight: 500; */
+            color: #000;
+            font-size: 1.3rem;
+            text-align: justify;
+            /* text-shadow: 0px 2px 8px rgba(221, 14, 14, 0.689); */
+        }
+
+       
+          
+          .count-number {
+            font-size: 2em;
+            font-weight: bold;
+          }
+          
+          .count-text {
+            font-size: 1.2em;
+          }
+          
+        .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 50px;
+        text-align: center;
+        }
+
+    .gallery-item {
+        width: 100%;
+        /* height: auto; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        animation: appear forwards;
+        animation-timeline: view();
+        animation-range:entry 0% cover 40% ;
+        overflow-x: hidden;
+    }
+
+    @keyframes appear{
+        from{
+            opacity: 0;
+            scale: 0;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+    .gallery-item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .gallery img {
+        width: 45%;
+        height: 355px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+        animation: fadeInLeft 1s ease-out; /* Add animation for left fade-in */
+    }
+
+    .gallery-item:nth-child(odd) .gallery img {
+        animation: fadeInRight 1s ease-out; /* Add animation for right fade-in */
+    }
+
+    .dummy-data {
+        width: 45%;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: fadeInRight 1s ease-out; /* Add animation for right fade-in */
+    }
+
+    .gallery-item:nth-child(odd) .dummy-data {
+        animation: fadeInLeft 1s ease-out; /* Add animation for left fade-in */
+    }
+
+    @keyframes fadeInLeft {
+        from { opacity: 0; transform: translateX(-50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    .testimonials {
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+         .testimonial-carousel {
+              overflow: hidden;
+        } 
+
+        .testimonial {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 10px;
+            transition: transform 0.5s, opacity 0.5s;
+            opacity: 0.6;
+        }
+
+        .carousel-item.active .testimonial {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .testimonial p {
+            font-size: 1.2rem;
+        }
+
+        .testimonial .highlighted {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .testimonial {
+                flex: 0 0 80%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .testimonial {
+                flex: 0 0 100%;
+            }
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+
+            padding: 12px;
+        }
+
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 15ch; } /* Adjust the width to the length of your text */
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+
+        .typed-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid;
+            animation: typing 4s steps(40, end), blink 0.75s step-end infinite; /* Adjust steps to match the length of your text */
+        }

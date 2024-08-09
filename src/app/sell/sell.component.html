@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" [formGroup]="sellform" (ngSubmit)="checksell()">
+                <div class="form-group">
+                    <label for="" class="form-label">id</label>
+                    <input type="text" class="form-control" formControlName="id">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Title</label>
+                    <input type="text" class="form-control" formControlName="title">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Price</label>
+                    <input type="text" class="form-control" formControlName="price">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">location</label>
+                    <input type="text" class="form-control" formControlName="location">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Description</label>
+                    <input type="text" class="form-control" formControlName="description">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Date</label>
+                    <input type="date" class="form-control" formControlName="date">
+                </div> <div class="form-group">
+                    <label for="" class="form-label">Image</label>
+                    <input type="text" class="form-control" formControlName="image">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-danger"[disabled]="!sellform.valid">Submit</button>
+                </div>
+
+
+
+
+            </form>
+        </div>
+    </div>
+</div>

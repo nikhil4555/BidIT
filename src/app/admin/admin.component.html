@@ -1,0 +1,40 @@
+<div class="main-container">
+    <!-- Overlay for the backdropshadow-->
+    <div class="overlay" *ngIf="isSidebarOpen" (click)="toggleSidebar()"></div>
+  
+    <!-- Side Nav Bar -->
+    <div class="side-nav" [class.open]="isSidebarOpen" id="sidebar">
+      <div class="close-icon" (click)="toggleSidebar()">&#10005;</div> <!-- Cross Icon -->
+      <img src="logo.png" alt="Logo" class="logo" />
+      <p class="welcome-message">Welcome User</p> <!-- Welcome Message -->
+      <a  routerLink="/admin/homeadmin" class="nav-link" >
+        <i class="fas fa-home"></i> Home
+      </a>
+      <a routerLink="/admin/adminorder" class="nav-link" >
+        <i class="fas fa-tag"></i> Orders
+      </a>
+      <a routerLink="/" class="nav-link" >
+        <i class="fas fa-sign-out-alt"></i> Sign Out
+      </a>
+    </div>
+  
+    <!-- Main Content Area -->
+    <div class="content-container">
+      <!-- Top Nav Bar -->
+      <div class="top-nav">
+        <div class="menu-icon" (click)="toggleSidebar()">&#9776;</div>
+        <div class="brand">BidIt</div> <!-- Company Name on the extreme left -->
+        <div class="nav-links">
+          <!-- <a routerLink="/user/home" class="nav-link">Home</a>
+          <a routerLink="/user/ " class="nav-link">About</a>
+          <a routerLink="/user/contact" class="nav-link">Contact</a> -->
+        </div>
+      </div>
+  
+      <!-- Main Content -->
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  

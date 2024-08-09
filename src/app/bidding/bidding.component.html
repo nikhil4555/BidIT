@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-12" *ngFor="let p of evenIndexedProducts">
+      <div class="card">
+        <div class="front">
+          <div class="card-image-container">
+            <img [src]="p.image" alt="Product Image" class="card-image">
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-content">
+            <h2 class="back-heading">{{p.title}}</h2>
+            <p>{{p.description}}</p>
+            <div class="card-info">
+              <span><i class="fas fa-map-marker-alt"></i> {{p.location}}</span>
+              <span><i class="fas fa-calendar-alt"></i> Posted: {{p.date}}</span>
+            </div>
+            <div class="card-price">
+              <span class="original-price">{{p.price.originalPrice | currency:'USD'}}</span>
+              <span class="discounted-price">{{p.price.discountedPrice | currency:'USD'}}</span>
+              <span class="discount-percentage">{{p.price.discountPercentage}}</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-buy" (click)="AddtoCart(p)">🛒 Add to Cart</button>
+              <button class="btn btn-favorite" [class.active]="p.pflag" (click)="toggleFavorite(p)">
+                <svg class="heart-icon" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </button>
+            </div>
+            <button class="btn btn-bid" (click)="bid(p)" *ngIf="p.id % 2 == 0">
+              Place Bid
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

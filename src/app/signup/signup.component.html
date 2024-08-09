@@ -1,0 +1,117 @@
+<div class="box">
+    <div class="container">
+        <div class="bubbles">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:24"></span>
+            <span style="--i:5"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:11"></span>
+            <span style="--i:22"></span>
+            <span style="--i:21"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+        </div>
+        
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center min-vh-100 d-flex">
+                    <div class="col-md-6 col-12 form-container ">
+                        <form action="" [formGroup]="signupform"(ngSubmit)="checksignupform()">
+                            <div class="form-group">
+                                <h3>SignUpForm</h3>
+                            </div>
+                            <div class="form-group">
+                                <label for="FullName" class="form-label">FullName:</label>
+                                <input type="text" class="form-control"id="FullName" name="FullName"formControlName="FullName">
+                            </div>
+                            <div class="form-group">
+                                <label for="Phone" class="form-label">Phone:</label>
+                                <input type="number" class="form-control"id="Phone" name="Phone" formControlName="Phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="Email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="Email" formControlName="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="Password" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="Password" name="Password" formControlName="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="ConfirmPassword" class="form-label">Confirm Password:</label>
+                                <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" formControlName="ConfirmPassword">
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit" [disabled]="!signupform.valid">SignUp</button>
+                                <button class="btn btn-danger" type="button">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,274 @@
+.card-image-container {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.right-column{
+    padding: 20px 10px;
+    /* margin: 10px 10px; */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-description h3{
+    color: #000;
+    font-weight: 900;
+}
+
+.description {
+    font-style: italic;
+    color: rgb(55, 52, 52);
+    /* font-weight: bold; */
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.card-title {
+    font-size: 3.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+    color: #e4110d;
+    text-align: center;
+    text-shadow: 0 5px 6px #e74c3c;
+}
+
+
+.card-info {
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    color: #000;
+    text-align: center;
+}
+
+.card-info i {
+    margin-right: 5px;
+}
+
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.btn-buy {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.btn-bid {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.btn-bid:hover,.btn-buy:hover {
+    background-color: #2980b9;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.btn-decrement, .btn-increment {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px;
+}
+
+.btn-decrement:hover, .btn-increment:hover {
+    background-color: #2980b9;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-size: 18px;
+    text-align: center;
+    min-width: 30px;
+    padding: 5px;
+}
+
+.timer {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .left-column, .right-column {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        margin: 5px 0;
+    }
+
+    .quantity-control {
+        margin: 10px 0;
+    }
+
+    .timer {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+}
+
+/* From Uiverse.io by catraco */ 
+.btn-class-name {
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 80px;
+    height: 65px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: 10px solid rgb(var(--primary), .5);
+    border-radius: 100%;
+    position: relative;
+    transition: .3s;
+}
+
+.btn-class-name .back {
+    background: rgb(var(--secondary));
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-class-name .front {
+    background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+    box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid rgb(var(--secondary));
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: .15s;
+    color: white;
+}
+
+.btn-class-name:active .front {
+    transform: translateY(0%);
+    box-shadow: 0 0;
+}
+
+
+.card-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.original-price {
+  font-size: 1.2em;
+  color: #999;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.discounted-price {
+  font-size: 1.5em;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.discount-percentage {
+  font-size: 1em;
+  color: #2ecc71;
+}
+
+
+/* ... existing styles ... */
+
+/* .cart {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 0 0 10px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+} */

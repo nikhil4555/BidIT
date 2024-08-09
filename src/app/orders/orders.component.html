@@ -1,0 +1,17 @@
+<table class="table table-bordered table-striped table-active table-hover">
+    <h1>{{msg}}</h1>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Image</th>
+        <th>Payment Type</th>
+    </tr>
+    <tr *ngFor="let p of buylist">
+        <td>{{slno}}</td>
+        <td>{{p.title}}</td>
+        <td><p>Shipped</p></td>
+        <td><img [src]="p.image" alt="loading" height="280" width="250"></td>
+        <td><p>COD</p></td>
+    </tr>
+</table>

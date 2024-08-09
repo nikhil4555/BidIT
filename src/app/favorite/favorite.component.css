@@ -1,0 +1,158 @@
+
+.card {
+    width: 345px;
+    height: auto;
+    background-color:  rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: visible;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 20px;
+    margin-top: 40px;
+
+  }
+  
+  .card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .card-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .card-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .original-price {
+    font-size: 1.2em;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 10px;
+  }
+  
+  .discounted-price {
+    font-size: 1.5em;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .discount-percentage {
+    font-size: 1em;
+    color: #2ecc71;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn {
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px 30px;
+    border-radius: 25px;
+  }
+  
+  .btn-favorite {
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  .heart-icon {
+    width: 38px;
+    height: 34px;
+    fill: #ffffff;
+    stroke: red;
+    stroke-width: 1.1;
+    /* transition: all 0.3s ease; */
+  }
+  
+  .btn-favorite.active .heart-icon {
+    fill: red;
+  }
+  
+  .btn-buy {
+    background-color: #0b77ad;
+    color: white;
+  }
+  
+  .btn-buy:hover {
+    /* background-color: #45a049; */
+    background-color: #333;
+
+  }
+  
+  .btn-bid {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    background-color: #3498db;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-bid:hover {
+    background-color: #2980b9;
+  }
+
+
+  /* TOP */
+  /* .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #2980b9;
+  } */

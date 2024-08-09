@@ -1,0 +1,101 @@
+
+
+.box {
+    background: #000;
+    color: #fff; /* Ensure text color is white for better readability */
+  }
+  
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bubbles {
+    position: relative;
+    display: flex;
+  }
+  
+  .bubbles span {
+    position: relative;
+    width: 585px;
+    height: 2.5px;
+    background: #0fa4a5;
+    margin: 0 2.5px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #afdde5, 0 0 50px #76f5f5, 0 0 100px #76f5f5;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(65s / var(--i));
+  }
+  
+  .bubbles span:nth-child(odd) {
+    background:  #f65003;
+    box-shadow: 0 0 0 8px rgb(214, 238, 6),
+                0 0 50px rgb(214, 238, 6),
+                0 0 100px rgb(214, 238, 6);
+  }
+  
+  
+  @keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-8vh) scale(.85);
+    }
+  }
+  
+  
+  
+  .form-container {
+    position: relative;
+    /* left: 50%; */
+    background: rgba(0, 0, 0, 0.8); /* Black background for the form container */
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    color: #fff; /* Ensure text color is white for better readability */
+  
+  }
+  
+  .form-group {
+    padding: 8px;
+  }
+  
+  .form-label {
+    /* font-weight: bold; */
+    color: #fff; /* White color for labels */
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #333; /* Dark background for input fields */
+    border: 1px solid #555; /* Darker border for input fields */
+    color: #fff; /* White text color for input fields */
+  }
+  
+  .form-control::placeholder {
+    color: #bbb; /* Lighter color for placeholders */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #0fa4a5; /* Custom button color */
+    border: none;
+    color: #fff;
+  }
+  
+  .btn-danger {
+    background-color: #e93b0a; /* Custom button color */
+    border: none;
+    color: #fff;
+  }
+  

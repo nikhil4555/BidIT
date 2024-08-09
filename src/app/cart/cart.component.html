@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div>{{msg}}</div>
+        <div class="col-md-4 col-12" *ngFor="let p of productlist">
+            <div class="card">
+                <div class="card-image-container">
+                    <img [src]="p.image" alt="Product Image" class="card-image">
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">{{p.title}}</h2>
+                    <div class="card-info">
+                        <span>📍 {{p.location}}</span>
+                        <span>🗓️ Posted: {{p.date}}</span>
+                    </div>
+                    <div class="card-price">
+                        <span class="original-price">{{p.price.originalPrice| currency:'USD'}}</span>
+                        <span class="discounted-price">{{p.price.discountedPrice| currency:'USD'}}</span>
+                        <span class="discount-percentage">{{p.price.discountPercentage}}</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-buy" (click)="openModal(p)">BuyNow</button>
+                        <div class="quantity-control">
+                            <button class="btn btn-decrement" (click)="decrementQuantity(p)">-</button>
+                            <span class="quantity">{{p.quantity||1}}</span>
+                            <button class="btn btn-increment" (click)="incrementQuantity(p)">+</button>
+                        </div>
+                        <button class="btn btn-buy" (click)="deletecart(p)">Delete</button>
+                    </div>
+                </div>
+                <button class="btn btn-bid" (click)="bid(p)" *ngIf="p.id % 2 == 0">
+                    Place Bid
+                </button>
+            </div>
+        </div>
+    </div>
+     <!-- Modal -->
+     <div class="modal" [ngClass]="{'show': showModal}" *ngIf="showModal">
+        <div class="modal-content">
+          <span class="close" (click)="closeModal()">&times;</span>
+          
+          <h4>{{ selectedProduct.title }}</h4>
+          <img [src]="selectedProduct.image" alt="" style="width: 89%; height: 79%;">
+          <p>{{ selectedProduct.description }}</p>
+          <p><strong>Price:</strong> {{ selectedProduct.price.discountedPrice | currency:'USD' }}</p>
+          <p><strong>Location:</strong> {{ selectedProduct.location }}</p>
+          <p><strong>Payment:</strong> COD</p>
+          <button class="btn btn-primary" (click)="purchaseProduct()">Purchase</button>
+          
+        </div>
+      </div>
+</div>

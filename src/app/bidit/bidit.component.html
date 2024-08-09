@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-6 left-column">
+            <div class="card-image-container">
+                <img [src]="p.image" alt="Product Image" class="card-image">
+            </div>
+            <div class="card-description">
+                <h3>Description:</h3>
+                <h5 class="description">{{p.description}}</h5>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-6 right-column">
+            <div class="card-content">
+                <h2 class="card-title">{{p.title}}</h2>
+                <div class="card-info">
+                    <i class="fas fa-map-marker-alt"></i> {{p.location}}<br>
+                    <i class="fas fa-calendar-alt"></i> Posted: {{p.date}}
+                </div>
+                <div class="card-price">
+                    <span class="original-price">{{p.price.originalPrice | currency:'USD'}}</span>
+                    <span class="discounted-price">{{p.price.discountedPrice | currency:'USD'}}</span>
+                    <span class="discount-percentage">{{p.price.discountPercentage}} off</span>
+                </div>
+                <!-- Timer -->
+                <div class="timer">
+                    <span>{{ minutes }} minutes {{ seconds }} seconds</span>
+                </div>
+                <div class="card-actions">
+                    <div class="quantity-control">
+                        <button class="btn btn-decrement" (click)="decrementQuantity(p)">-</button>
+                        <span class="quantity">{{bidprice | currency:'USD'}}</span>
+                        <button class="btn btn-increment" (click)="incrementQuantity(p)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="btn-class-name" (click)="bid()">
+                        <span class="back"></span>
+                        <span class="back"></span>
+                        <span class="front">Place Bid</span>
+                    </button>   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
